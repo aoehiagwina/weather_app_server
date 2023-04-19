@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="icon" href="/img/weather2.png"/>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+    <div class="main_page">
+       {{!-- this how you implement a handlebar partials{{> header}}  --}}
+        {{>header}}
+        <br>
+        <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+
+        <p id="message_1"></p>
+        <p id="message_2"></p>
+
+        <img src="/img/equality.jpeg">
+        <p>Just adding extra note</p>
+    </div>
+
+    {{>footer}}
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
