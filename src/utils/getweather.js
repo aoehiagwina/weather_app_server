@@ -22,9 +22,27 @@ const getWeather_details = (location, callback) => {
         else {
             let feels_like = body.current.feelslike;
             let temp = body.current.temperature;
-            let weather_description = body.current.weather_descriptions;
-            const update = `The current tmeprature is ${temp} degrees. However, it feels like ${feels_like} degrees, although its a bit ${weather_description[0]}.`;
-            callback(undefined, update);
+            let weather_description = body.current.weather_descriptions[0];
+            let weather_icon = body.current.weather_icons[0];
+            let humidity = body.current.humidity
+
+            let place = body.location.name;
+            let country = body.location.country;
+            let lat = body.location.lat;
+            let lon = body.location.lon;
+            let region = body.location.region
+            const update = `This is The current tmeprature is ${temp} degrees, however, it feels like ${feels_like} degrees. It is ${weather_description} and the humidity is ${humidity}%.`;
+
+            const data = {
+                place,
+                country,
+                lat,
+                lon,
+                region,
+                weather_icon,
+                message: update
+            }
+            callback(undefined, data);
         }
     })
 }

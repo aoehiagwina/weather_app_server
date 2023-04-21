@@ -92,8 +92,14 @@ app.get('/weather', (req, res) => {
         } 
 
         res.send({
-            forecast: data,
-            location: location
+            searched_address: location,
+            forecast: data.message,
+            place: data.place,
+            country: data.country,
+            latitude: data.lat,
+            longitude: data.lon,
+            region: data.region,
+            icon: data.weather_icon
         })
     })
 

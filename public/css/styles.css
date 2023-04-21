@@ -12,10 +12,38 @@ body {
 
 .main_page {
     flex-grow: 1;
+
 }
 
 img {
     width: 450px;
+}
+
+.weather_i {
+    width: 200px;
+}
+
+.info {
+    color: #888888;
+    font-weight: bold;
+}
+
+.hold {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-content: space-between;
+    max-width: 400px;
+}
+
+.img_w {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.text {
+    margin-top: 15px;
+    flex-grow: 1;
 }
 
 footer {
